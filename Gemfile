@@ -28,12 +28,18 @@ gem 'spring',        group: :development
 
 gem 'devise'
 
+group :production do
+  gem 'rails_12factor'
+end
+
 group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'factory_girl_rails'
   gem 'poltergeist'
   gem 'database_cleaner'
+  gem 'capybara-email'
+  gem 'mailcatcher'
 end
 
 # Use ActiveModel has_secure_password
