@@ -1,0 +1,6 @@
+<% if @posts.any? %>
+  <%= render @posts %>
+<% else %>
+  No posts yet
+<% end %>
+<%= link_to 'New post', new_post_path %>
