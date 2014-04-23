@@ -1,6 +1,6 @@
 <div class='post'>
   <h1><%= link_to post.title, post.url %></h1>
-  <h2 class='votes_count'><%= post.votes_count %></h2>
+  <h2 class='votes_count' data-id='<%= post.id %>'><%= post.votes_count %></h2>
   <p><%= button_to '↑', post_votes_path(post, direction: :up), class: 'vote_button' %></p>
   <p><%= button_to 'Downvote', post_votes_path(post, direction: :down), class: 'vote_button' %></p>
   <p><%= post.description %></p>
